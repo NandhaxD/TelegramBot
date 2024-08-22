@@ -1,7 +1,9 @@
 # Making Pyrogram framework example bots for youtube explanation.
 
 
-```Public API ( ID | HASH )
+
+#Public API ( ID | HASH )
+```
 ---- Public Android Beta ----
 APP_CONFIG_API_ID = 4
 APP_CONFIG_API_HASH = "014b35b6184100b085b0d0572f9b5103"
