@@ -1,10 +1,12 @@
-# Making Pyrogram framework example bots for youtube explanation.
+# Here you can get some telegram bot library code example's.
 
 
 
 
 
-# Public API ( ID | HASH )
+
+
+# Telegram Public API ( ID | HASH ) for MTproto clients
 ```
 ---- Public Android Beta ----
 APP_CONFIG_API_ID = 4
