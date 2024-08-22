@@ -5,31 +5,25 @@
 # >>> tgcrypto
 
 
-
-import logging
-
-logging.basicConfig(level=logging.INFO)
-
-from pyrogram import Client, filters
+from pyrogram import Client, filters, types
 
 
 app = Client(
-name="Nandhabot",
-api_id=12345,
-api_hash="api_hash",
-bot_token="7508215693:AAEorpF2EkWbc7BmzX7rIkNh81Yo7HUIq1k"
+ name="NandhaBot",
+ api_id=12345,
+ api_hash="abcd",
+ bot_token="bottoken"
+      
 )
 
+chat_id: int = -1002168230403
+to_chat_id: int = -1002201203404
 
-channel_id = -1002168230403
-to_channel_id= -1002201203404
 
-
-@app.on_message(filters.chat(channel_id))
-async def forwarder(bot, message):
-      m = message
-      await m.forward(to_channel_id)
-      
-      
+@app.on_message(filters.chat(chat_id))
+async def forward(bot: app, message: types.Message):
+      await message.forward(
+              to_chat_id
+      )
 
 app.run()
