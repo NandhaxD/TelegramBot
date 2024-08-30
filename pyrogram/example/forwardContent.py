@@ -21,6 +21,8 @@ to_chat_id: int = -1002201203404
 
 @app.on_message(filters.chat(chat_id))
 async def forward(bot: app, message: types.Message):
+      # message.forward is bound method of bot.forward_messages()
+
       await message.forward(  # message.copy() for without tag.
               to_chat_id
       )
