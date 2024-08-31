@@ -1,9 +1,13 @@
 
-from pyrogram import Client, filters, errors, types
+
+
+# Module for force a user to subscribe a channel/chat to use bots features.
+# code By t.me/nandhabots
 
 import logging
 
 
+from pyrogram import Client, filters, errors, types
 logging.basicConfig(level=logging.INFO)
 
 app = Client(name="Nandha", api_id=12345, api_hash="abcd", bot_token="bottoken")
