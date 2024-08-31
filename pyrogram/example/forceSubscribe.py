@@ -6,7 +6,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-app = Client(name="Nandha", api_id=13257951, api_hash="d8ea642aedb736d40035bc05f0cfd477", bot_token="6990642754:AAGORkNCef_9Gsibtb9HGSj3KHEXlx8MwNA")
+app = Client(name="Nandha", api_id=12345, api_hash="abcd", bot_token="bottoken")
 
 
 FCHAT_ID: int = -1001995603469
