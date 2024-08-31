@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO)
 app = Client(name="Nandha", api_id=12345, api_hash="abcd", bot_token="bottoken")
 
 
-FCHAT_ID: int = -1001995603469
+FCHAT_ID: int = -100123456789
 
 
 @app.on_message(filters.command('help'))
