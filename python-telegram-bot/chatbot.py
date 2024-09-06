@@ -99,7 +99,7 @@ async def main() -> NoReturn:
     async with Bot(TOKEN) as bot:
         last_update_id = 0
 
-        logging.info("BOT STARTED TO LISTENING...")
+        logger.info("BOT STARTED TO LISTENING...")
         while True:
             try:
                 # Fetch updates from the bot
