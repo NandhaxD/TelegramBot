@@ -32,6 +32,8 @@ logger = logging.getLogger(__name__)
 
 # Replace with your bot token from @BotFather
 TOKEN = "123456789:abcd"
+char_id = "Vegeta9z9K0T7"
+char_name = "Vegeta"
 
 async def BlackBoxChat(user_id: str, messages: list) -> dict:
     """
@@ -50,8 +52,8 @@ async def BlackBoxChat(user_id: str, messages: list) -> dict:
         "codeModelMode": True,
         "agentMode": {
             "mode": True,
-            "id": "GojoSatoruRaDo5Qr",
-            "name": "Gojo Satoru"
+            "id": char_id,
+            "name": char_name
         },
         "trendingAgentMode": {}
     }
