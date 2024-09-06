@@ -30,10 +30,10 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logger = logging.getLogger(__name__)
 
-# Replace with your bot token from @BotFather
-TOKEN = "123456789:abcd"
-char_id = "Vegeta9z9K0T7"
-char_name = "Vegeta"
+
+TOKEN = "123456789:abcd" # Replace with your bot token from @BotFather
+char_id = "Vegeta9z9K0T7" # AGENT-ID from https://blackbox.ai
+char_name = "Vegeta" # CHARACTER-NAME as same as you entered name for create Agent [Optional]
 
 async def BlackBoxChat(user_id: str, messages: list) -> dict:
     """
