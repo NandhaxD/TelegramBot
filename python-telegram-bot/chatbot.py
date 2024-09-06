@@ -95,9 +95,11 @@ async def main() -> NoReturn:
     The main function that continuously fetches updates from Telegram, processes incoming
     messages, and interacts with the bot.
     """
+   
     async with Bot(TOKEN) as bot:
         last_update_id = 0
 
+        logging.info("BOT STARTED TO LISTENING...")
         while True:
             try:
                 # Fetch updates from the bot
