@@ -24,6 +24,30 @@ nandha = Client(
 )
 
 
+async def generate_image(query: str):
+    payload = {
+        "messages": [{"content": query, "role": "user"}],
+        "user_id": str(uuid.uuid4()),
+        "codeModelMode": True,
+        "agentMode": {
+            "mode": True,
+            "id": "ImageGenerationLV45LJp",
+            "name": "Image Generation"
+        },
+    }
+
+    headers = {
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 11; Infinix X6816C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.98 Mobile Safari/537.36"
+    }
+
+    api_url = "https://www.blackbox.ai/api/chat"
+
+    async with aiohttp.ClientSession() as session:
+        async with session.post(api_url, json=payload, headers=headers) as response:
+            response_text = await response.text()
+            link = re.search(r"(https://storage\.googleapis\.com/[^\)]+)", response_text)
+            return link.group() if link else None
 
 @nandha.on_message(filters.text & filters.private)
 async def ImageGenCmd(bot, message) -> types.Message:
@@ -56,4 +80,3 @@ if __name__ == "__main__":
 
 
      
-
