@@ -4,9 +4,9 @@ from pyrogram import filters, Client
 #Let's create a filter that only return True when the user first has tag in their name.
 
 
-hashtag: str = '#nandhabots'
+tag: str = '#nandhabots'
 
-def _hashtag_filter(filter, client, message) -> bool: return hashtag in message.from_user.first_name
+def _hashtag_filter(filter, client, message) -> bool: return tag in message.from_user.first_name
 
 hashtag = filters.create(_hashtag_filter)
 
