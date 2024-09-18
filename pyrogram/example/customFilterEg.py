@@ -11,7 +11,9 @@ def _hashtag_filter(filter, client, message) -> bool: return hashtag in message.
 hashtag = filters.create(_hashtag_filter)
 
 # Now you can use them like
-@Client.on_message(hashtag) async def _reply(client, message) -> types.Message: return await message.reply_text("Hi my fans 😍")
+@Client.on_message(hashtag)
+async def _reply(client, message) -> types.Message:
+     return await message.reply_text("Hi my fans 😍")
 
 
 # Example to making a unique filter
@@ -23,7 +25,9 @@ def hashtag(tag: str) -> filters:
 
 
 # Now you can use them like
-@Client.on_message(hashtag("#dogs")) async def _reply(client, message) -> types.Message: return await message.reply_text("Hi my fans 😍")
+@Client.on_message(hashtag("#dogs"))
+async def _reply(client, message) -> types.Message: 
+      return await message.reply_text("Hi my fans 😍")
 
 
 
